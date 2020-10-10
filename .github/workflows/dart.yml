@@ -1,22 +1,4 @@
-name: Dart CI
-
-on:
-  push:
-    branches: [ master ]
-  pull_request:
-    branches: [ master ]
-
-jobs:
-  build:
-
-    runs-on: ubuntu-latest
-
-    container:
-      image:  google/dart:latest
-
-    steps:
-    - uses: actions/checkout@v2
-    - name: Install dependencies
-      run: pub get
-    - name: Run tests
-      run: pub run test
+name: Flutter Deployment
+  # You may pin to the exact commit or the version.
+  # uses: jeanluc243/Flutter-Deployment@1fd33eb513293af0c6cde57363d66a6a848ef6e5
+  uses: jeanluc243/Flutter-Deployment@0.1
